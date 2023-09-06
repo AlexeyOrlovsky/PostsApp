@@ -8,7 +8,6 @@
 import UIKit
 import RealmSwift
 
-// saving user-added icon
 class RealmUserIconModel: Object {
     @Persisted var iconUser: Data?
 }

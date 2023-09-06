@@ -12,6 +12,7 @@ import Kingfisher
 class LettersTableViewCell: UITableViewCell {
     static let identifier = "CustomLettersTableViewCell"
     
+    /// UI Elements
     let iconUser: UIImageView = {
         let image = UIImageView()
         image.backgroundColor = .gray
@@ -30,7 +31,7 @@ class LettersTableViewCell: UITableViewCell {
     let letterText: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
-        label.numberOfLines = 1
+        label.numberOfLines = 0
         return label
     }()
     
@@ -58,31 +59,33 @@ class LettersTableViewCell: UITableViewCell {
         contentView.addSubview(letterImage)
     }
     
+    /// Constraints
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        iconUser.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(10)
-            make.left.equalToSuperview().inset(10)
-            make.width.equalTo(40)
-            make.height.equalTo(40)
-        }
-        
-        nameUser.snp.makeConstraints { make in
-            make.centerY.equalTo(iconUser.snp.centerY)
-            make.left.equalTo(iconUser.snp.right).offset(10)
-        }
-        
-        publicationDate.snp.makeConstraints { make in
-            make.top.equalTo(nameUser.snp.bottom).offset(2)
-            make.left.equalTo(iconUser.snp.right).offset(10)
-            make.width.equalTo(280)
-        }
+//        iconUser.snp.makeConstraints { make in
+//            make.top.equalToSuperview().inset(10)
+//            make.left.equalToSuperview().inset(10)
+//            make.width.equalTo(40)
+//            make.height.equalTo(40)
+//        }
+//
+//        nameUser.snp.makeConstraints { make in
+//            make.centerY.equalTo(iconUser.snp.centerY)
+//            make.left.equalTo(iconUser.snp.right).offset(10)
+//        }
+//
+//        publicationDate.snp.makeConstraints { make in
+//            make.top.equalTo(nameUser.snp.bottom).offset(2)
+//            make.left.equalTo(iconUser.snp.right).offset(10)
+//            make.width.equalTo(280)
+//        }
         
         letterText.snp.makeConstraints { make in
-            make.top.equalTo(publicationDate.snp.bottom).offset(10)
-            make.left.equalTo(iconUser.snp.right).offset(10)
-            make.width.equalTo(280)
+            make.top.equalToSuperview().inset(10)
+            make.left.equalToSuperview().inset(10)
+            make.right.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(10)
         }
         
 //        letterImage.snp.makeConstraints { make in
@@ -102,6 +105,7 @@ class LettersTableViewCell: UITableViewCell {
         letterText.text = letter.text
         publicationDate.text = letter.publicationDate
         
+        // error
         if let imageUrlString = letter.iconUser, let imageUrl = URL(string: imageUrlString) {
             iconUser.kf.setImage(with: imageUrl) { result in
                 switch result {
@@ -113,5 +117,7 @@ class LettersTableViewCell: UITableViewCell {
                 }
             }
         }
+        
+        layoutSubviews()
     }
 }

@@ -13,6 +13,7 @@ import FirebaseAuth
 
 class SignInViewController: UIViewController {
     
+    /// UI Elements
     let sliderButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .label
@@ -68,15 +69,15 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addSubviews()
-        settingViewDidLoad()
+        setupAddSubviews()
+        setupViewDidLoad()
     }
     
-    func settingViewDidLoad() {
+    func setupViewDidLoad() {
         view.backgroundColor = UIColor(named: "RegistrationBackgroundColor")
     }
     
-    func addSubviews() {
+    func setupAddSubviews() {
         view.addSubview(sliderButton)
         sliderButton.addTarget(self, action: #selector(sliderButtonAction), for: .touchUpInside)
         
@@ -135,7 +136,7 @@ class SignInViewController: UIViewController {
     }
 }
 
-// @ubjc funcs
+/// @ubjc funcs
 extension SignInViewController {
     
     @objc func enterButtonAction() {
@@ -148,7 +149,6 @@ extension SignInViewController {
         existenceCheckUser(email: email, password: password)
     }
     
-    // MARK: Existence check user
     func existenceCheckUser(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [self] authCheck, error in
             guard let check = authCheck, error == nil else { self.doesNotExist(); return }
@@ -158,7 +158,6 @@ extension SignInViewController {
         }
     }
     
-    // MARK: save in Realm
     func saveUserLoginStage(email: String, password: String) {
         let login = RealmLoginModel()
         let realm = try? Realm()
@@ -182,7 +181,7 @@ extension SignInViewController {
     }
 }
 
-// Alerts
+/// Alerts
 extension SignInViewController {
     func fieldsNotMatch() {
         let alert = UIAlertController(title: "Do not match!",

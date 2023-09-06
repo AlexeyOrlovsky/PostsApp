@@ -13,9 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // create object realm login stage
-        // Создание окна и установка корневого контроллера
         let realm = try? Realm()
-        if let user = realm?.objects(RealmLoginModel.self).first {
+        if (realm?.objects(RealmLoginModel.self).first) != nil {
             NavigationManager.shared.showAuthUserStage()
         } else {
             NavigationManager.shared.showNotAuthUserStage()

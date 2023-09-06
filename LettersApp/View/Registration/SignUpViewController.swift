@@ -16,6 +16,7 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
     
+    /// UI Elements
     let sliderButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .label
@@ -119,11 +120,15 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addSubviews()
+        setupVeiwDidLoad()
+        setupAddSubviews()
     }
     
-    func addSubviews() {
-        view.backgroundColor = UIColor(named: "RegistrationBackgroundColor") // Settings viewDidLoad
+    func setupVeiwDidLoad() {
+        view.backgroundColor = UIColor(named: "RegistrationBackgroundColor")
+    }
+    
+    func setupAddSubviews() {
         
         view.addSubview(sliderButton)
         sliderButton.addTarget(self, action: #selector(sliderButtonAction), for: .touchUpInside)
@@ -226,7 +231,7 @@ class SignUpViewController: UIViewController {
     }
 }
 
-// @objc funcs
+/// @objc funcs
 extension SignUpViewController {
     
     @objc func createButtonAction() {
@@ -311,7 +316,7 @@ extension SignUpViewController {
     }
 }
 
-// Alerts
+/// Alerts
 extension SignUpViewController {
     func fieldEmptyAlert() {
         let alert = UIAlertController(title: "Fields are empty!", message: .none, preferredStyle: .alert)
@@ -320,7 +325,7 @@ extension SignUpViewController {
     }
 }
 
-// UiImagePicker
+/// UIImagePicker
 extension SignUpViewController {
     func imagePicker(sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
@@ -335,7 +340,7 @@ extension SignUpViewController {
     }
 }
 
-// UIImagePickerControllerDelegate & UINavigationControllerDelegate
+/// UIImagePickerControllerDelegate & UINavigationControllerDelegate
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage

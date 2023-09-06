@@ -8,7 +8,6 @@
 import UIKit
 import RealmSwift
 
-// to save the user's login state
 class RealmLoginModel: Object {
     @Persisted var email = ""
     @Persisted var password = ""

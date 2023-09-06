@@ -19,6 +19,7 @@ class NewLetterViewController: UIViewController {
     var currentUser = ""
     var userIcon: UIImage?
     
+    /// UI Elements
     let writeLetter: UITextView = {
         let field = UITextView()
         field.textColor = .gray
@@ -40,11 +41,11 @@ class NewLetterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSubviews()
-        settingViewDidLoad()
+        setupAddSubviews()
+        setupViewDidLoad()
     }
     
-    func settingViewDidLoad() {
+    func setupViewDidLoad() {
         view.backgroundColor = .systemBackground
         
         title = "New Letter"
@@ -54,11 +55,12 @@ class NewLetterViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .systemBlue
     }
     
-    func addSubviews() {
+    func setupAddSubviews() {
         view.addSubview(writeLetter)
         view.addSubview(addImageButton)
     }
     
+    /// Constraints
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -76,7 +78,7 @@ class NewLetterViewController: UIViewController {
     }
 }
 
-// @objc funcs
+/// @objc funcs
 extension NewLetterViewController {
     
     @objc func rightBarButtonAction() {
@@ -185,7 +187,7 @@ extension NewLetterViewController {
     }
 }
 
-// Alerts
+/// Alerts
 extension NewLetterViewController {
     func showFillFieldAlert() {
         let alert = UIAlertController(title: "Text field is empty!", message: "Fill in the field", preferredStyle: .alert)

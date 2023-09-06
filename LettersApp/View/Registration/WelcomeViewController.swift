@@ -10,7 +10,7 @@ import SnapKit
 
 class WelcomeViewController: UIViewController {
     
-    // Creating arrays of colors and texts
+    /// decorators
     let backgroundColors: [UIColor] = [
         UIColor(red: 13/255, green: 39/255, blue: 123/255, alpha: 1),
         UIColor(red: 23/255, green: 200/255, blue: 158/255, alpha: 1),
@@ -29,6 +29,7 @@ class WelcomeViewController: UIViewController {
     ]
     let texts: [String] = ["I Know!", "Letters", "World!", "Hello", "Good", "My", "What?"]
     
+    /// UI Elements
     let mainText: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 48, weight: .bold)
@@ -77,11 +78,11 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSubviews()
-        viewAnimations()
+        setupAddSubviews()
+        setupViewAnimations()
     }
     
-    func addSubviews() {
+    func setupAddSubviews() {
         view.addSubview(mainText)
         
         view.addSubview(authView)
@@ -95,7 +96,7 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    func viewAnimations() {
+    func setupViewAnimations() {
         view.backgroundColor = backgroundColors[0]
         mainText.textColor = textColors[0]
         mainText.text = texts[0]
@@ -153,7 +154,7 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-// @objc funcs
+/// @objc funcs
 extension WelcomeViewController {
     
     @objc func signUpButtonAction() {

@@ -18,8 +18,6 @@ class NavigationManager {
         let sceneDelegate = UIApplication.shared.connectedScenes.first!.delegate as! SceneDelegate
         sceneDelegate.window?.rootViewController = navigationController
         sceneDelegate.window?.makeKeyAndVisible()
-        
-        
     }
     
     func showNotAuthUserStage() {

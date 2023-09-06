@@ -36,11 +36,11 @@ class LettersViewController: UIViewController {
         super.viewDidLoad()
         
         fetchData()
-        settingViewDidLoad()
-        configureCollectionView()
+        setupViewDidLoad()
+        setupTableView()
     }
     
-    func settingViewDidLoad() {
+    func setupViewDidLoad() {
         view.backgroundColor = .systemBackground
         title = "Letters"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -48,22 +48,19 @@ class LettersViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .label
     }
     
-    func configureCollectionView() {
+    func setupTableView() {
         view.addSubview(tableView)
         
         tableView.register(LettersTableViewCell.self, forCellReuseIdentifier: LettersTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
+        
+        tableView.frame = view.bounds
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: #selector(fetchingLastData), for: .valueChanged)
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
     }
     
     func fetchData() {
@@ -80,7 +77,7 @@ class LettersViewController: UIViewController {
     }
 }
 
-// UITableViewDelegate & UITableViewDataSource
+/// UITableViewDelegate & UITableViewDataSource
 extension LettersViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return letters.count
@@ -94,10 +91,6 @@ extension LettersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120 //520
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -136,7 +129,7 @@ extension LettersViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-// @objc funcs
+/// @objc funcs
 extension LettersViewController {
     
     @objc func fetchingLastData() {
@@ -152,7 +145,7 @@ extension LettersViewController {
     }
 }
 
-// Alerts
+/// Alerts
 extension LettersViewController {
     
     func notYourLetter() {

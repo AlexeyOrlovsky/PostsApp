@@ -12,10 +12,10 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       configureTabBar()
+       setupTabBar()
     }
     
-    func configureTabBar() {
+    func setupTabBar() {
         viewControllers = [
             UINavigationController(rootViewController: showViewController(viewController: LettersViewController(), title: "Letters", image: UIImage(systemName: "rectangle.portrait.on.rectangle.portrait.angled.fill")!)),
             UINavigationController(rootViewController: showViewController(viewController: AccountViewController(), title: "Account", image: UIImage(systemName: "person.fill")!)),

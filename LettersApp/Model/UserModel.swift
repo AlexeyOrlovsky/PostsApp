@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 
-// user model in Firestore
 struct UserModel: Codable, Identifiable {
     var id: String? // @DocumentID, error / AccountViewController / userName
     var name: String

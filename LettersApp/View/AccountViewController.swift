@@ -35,6 +35,7 @@ class AccountViewController: UIViewController {
         }
     }
     
+    /// UI Elements
     let userInfoContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
@@ -65,13 +66,13 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addSubviews()
-        settingViewDidLoad()
+        setupAddSubviews()
+        setupViewDidLoad()
+        setupTableView()
         configureUserData()
-        tableViewSettings()
     }
 
-    func settingViewDidLoad() {
+    func setupViewDidLoad() {
         view.backgroundColor = .systemBackground
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "bookmark.fill"), style: .done, target: self, action: #selector(rightBarButtonAction))
         navigationItem.rightBarButtonItem?.tintColor = .gray
@@ -79,7 +80,7 @@ class AccountViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = .gray
     }
     
-    func addSubviews() {
+    func setupAddSubviews() {
         view.addSubview(userInfoContainer)
         userInfoContainer.addSubview(userIcon)
         userInfoContainer.addSubview(userName)
@@ -88,7 +89,7 @@ class AccountViewController: UIViewController {
         view.addSubview(tableView)
     }
     
-    func tableViewSettings() {
+    func setupTableView() {
         tableView.register(LettersTableViewCell.self, forCellReuseIdentifier: LettersTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
         tableView.delegate = self
@@ -140,6 +141,7 @@ class AccountViewController: UIViewController {
         }
     }
     
+    /// Constraints
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -174,7 +176,7 @@ class AccountViewController: UIViewController {
     }
 }
 
-// @objc funcs
+/// @objc funcs
 extension AccountViewController {
     
     @objc func rightBarButtonAction() {
@@ -206,7 +208,7 @@ extension AccountViewController {
     }
 }
 
-// UITableViewDelegate & UITableViewDataSource
+/// UITableViewDelegate & UITableViewDataSource
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return letters.count
@@ -220,9 +222,5 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120 //520
     }
 }
