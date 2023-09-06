@@ -1,0 +1,811 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4190D4FCD6CFB49D1E068F23 /* Pods_LettersApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB54102E850457F48742444B /* Pods_LettersApp.framework */; };
+		D2978E2A2A86B13B00A46304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E292A86B13B00A46304 /* AppDelegate.swift */; };
+		D2978E2C2A86B13B00A46304 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E2B2A86B13B00A46304 /* SceneDelegate.swift */; };
+		D2978E2E2A86B13B00A46304 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E2D2A86B13B00A46304 /* SignInViewController.swift */; };
+		D2978E312A86B13B00A46304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2978E2F2A86B13B00A46304 /* Main.storyboard */; };
+		D2978E332A86B13D00A46304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2978E322A86B13D00A46304 /* Assets.xcassets */; };
+		D2978E362A86B13D00A46304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2978E342A86B13D00A46304 /* LaunchScreen.storyboard */; };
+		D2978E412A86B13D00A46304 /* LettersAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E402A86B13D00A46304 /* LettersAppTests.swift */; };
+		D2978E4B2A86B13D00A46304 /* LettersAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E4A2A86B13D00A46304 /* LettersAppUITests.swift */; };
+		D2978E4D2A86B13D00A46304 /* LettersAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E4C2A86B13D00A46304 /* LettersAppUITestsLaunchTests.swift */; };
+		D2978E5F2A86EA0500A46304 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E5E2A86EA0500A46304 /* SignUpViewController.swift */; };
+		D2978E632A86ED0000A46304 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E622A86ED0000A46304 /* NavigationManager.swift */; };
+		D2978E652A88261700A46304 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2978E642A88261700A46304 /* GoogleService-Info.plist */; };
+		D2978E672A882E9900A46304 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E662A882E9900A46304 /* UserModel.swift */; };
+		D2978E692A8969C700A46304 /* LettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E682A8969C700A46304 /* LettersViewController.swift */; };
+		D2978E6B2A896BD600A46304 /* RealmLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E6A2A896BD600A46304 /* RealmLoginModel.swift */; };
+		D2CE75172A897E1700D67E4B /* NewLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75162A897E1700D67E4B /* NewLetterViewController.swift */; };
+		D2CE751A2A897F9F00D67E4B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75192A897F9F00D67E4B /* TabBarViewController.swift */; };
+		D2CE751C2A8A1B0800D67E4B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE751B2A8A1B0800D67E4B /* AccountViewController.swift */; };
+		D2CE751E2A8A228600D67E4B /* LettersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE751D2A8A228600D67E4B /* LettersTableViewCell.swift */; };
+		D2CE75202A8A446900D67E4B /* SaveLettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE751F2A8A446900D67E4B /* SaveLettersViewController.swift */; };
+		D2CE75262A8ABC9000D67E4B /* RealmUserIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75252A8ABC9000D67E4B /* RealmUserIconModel.swift */; };
+		D2CE75282A8C07E900D67E4B /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75272A8C07E900D67E4B /* LetterModel.swift */; };
+		D2CE752D2A8CEC5800D67E4B /* LetterModelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE752C2A8CEC5800D67E4B /* LetterModelExtension.swift */; };
+		D2CE752F2A8CEECD00D67E4B /* LetterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE752E2A8CEECD00D67E4B /* LetterService.swift */; };
+		D2DEF6982A8EA4ED00EB94DB /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEF6972A8EA4ED00EB94DB /* WelcomeViewController.swift */; };
+		D2DEF69A2A913DFF00EB94DB /* other.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEF6992A913DFF00EB94DB /* other.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D2978E3D2A86B13D00A46304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2978E1E2A86B13B00A46304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2978E252A86B13B00A46304;
+			remoteInfo = LettersApp;
+		};
+		D2978E472A86B13D00A46304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2978E1E2A86B13B00A46304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2978E252A86B13B00A46304;
+			remoteInfo = LettersApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7AA9BE535225A489D9FA478 /* Pods-LettersApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LettersApp.release.xcconfig"; path = "Target Support Files/Pods-LettersApp/Pods-LettersApp.release.xcconfig"; sourceTree = "<group>"; };
+		BB54102E850457F48742444B /* Pods_LettersApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LettersApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA41688480B9EAF9BD42140 /* Pods-LettersApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LettersApp.debug.xcconfig"; path = "Target Support Files/Pods-LettersApp/Pods-LettersApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D2978E262A86B13B00A46304 /* LettersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LettersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2978E292A86B13B00A46304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2978E2B2A86B13B00A46304 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D2978E2D2A86B13B00A46304 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		D2978E302A86B13B00A46304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2978E322A86B13D00A46304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2978E352A86B13D00A46304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2978E372A86B13D00A46304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2978E3C2A86B13D00A46304 /* LettersAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LettersAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2978E402A86B13D00A46304 /* LettersAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersAppTests.swift; sourceTree = "<group>"; };
+		D2978E462A86B13D00A46304 /* LettersAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LettersAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2978E4A2A86B13D00A46304 /* LettersAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersAppUITests.swift; sourceTree = "<group>"; };
+		D2978E4C2A86B13D00A46304 /* LettersAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2978E5E2A86EA0500A46304 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		D2978E622A86ED0000A46304 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		D2978E642A88261700A46304 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D2978E662A882E9900A46304 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		D2978E682A8969C700A46304 /* LettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewController.swift; sourceTree = "<group>"; };
+		D2978E6A2A896BD600A46304 /* RealmLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLoginModel.swift; sourceTree = "<group>"; };
+		D2CE75162A897E1700D67E4B /* NewLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLetterViewController.swift; sourceTree = "<group>"; };
+		D2CE75192A897F9F00D67E4B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		D2CE751B2A8A1B0800D67E4B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		D2CE751D2A8A228600D67E4B /* LettersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersTableViewCell.swift; sourceTree = "<group>"; };
+		D2CE751F2A8A446900D67E4B /* SaveLettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLettersViewController.swift; sourceTree = "<group>"; };
+		D2CE75252A8ABC9000D67E4B /* RealmUserIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserIconModel.swift; sourceTree = "<group>"; };
+		D2CE75272A8C07E900D67E4B /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
+		D2CE752C2A8CEC5800D67E4B /* LetterModelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModelExtension.swift; sourceTree = "<group>"; };
+		D2CE752E2A8CEECD00D67E4B /* LetterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterService.swift; sourceTree = "<group>"; };
+		D2DEF6972A8EA4ED00EB94DB /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D2DEF6992A913DFF00EB94DB /* other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = other.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2978E232A86B13B00A46304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4190D4FCD6CFB49D1E068F23 /* Pods_LettersApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E392A86B13D00A46304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E432A86B13D00A46304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		665BD5F4C4A959871D4C3800 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB54102E850457F48742444B /* Pods_LettersApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80CF7E9629DE82D185DB9B7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEA41688480B9EAF9BD42140 /* Pods-LettersApp.debug.xcconfig */,
+				A7AA9BE535225A489D9FA478 /* Pods-LettersApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2978E1D2A86B13B00A46304 = {
+			isa = PBXGroup;
+			children = (
+				D2978E282A86B13B00A46304 /* LettersApp */,
+				D2978E3F2A86B13D00A46304 /* LettersAppTests */,
+				D2978E492A86B13D00A46304 /* LettersAppUITests */,
+				D2978E272A86B13B00A46304 /* Products */,
+				80CF7E9629DE82D185DB9B7A /* Pods */,
+				665BD5F4C4A959871D4C3800 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D2978E272A86B13B00A46304 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E262A86B13B00A46304 /* LettersApp.app */,
+				D2978E3C2A86B13D00A46304 /* LettersAppTests.xctest */,
+				D2978E462A86B13D00A46304 /* LettersAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2978E282A86B13B00A46304 /* LettersApp */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E292A86B13B00A46304 /* AppDelegate.swift */,
+				D2978E2B2A86B13B00A46304 /* SceneDelegate.swift */,
+				D2978E642A88261700A46304 /* GoogleService-Info.plist */,
+				D2978E372A86B13D00A46304 /* Info.plist */,
+				D2978E592A86E85200A46304 /* Model */,
+				D2978E5A2A86E86000A46304 /* View */,
+				D2978E5C2A86E86F00A46304 /* ViewModel */,
+				D2978E612A86ECE900A46304 /* Services */,
+				D2CE752B2A8CEC3400D67E4B /* Extensions */,
+				D2978E5D2A86E88900A46304 /* Other */,
+			);
+			path = LettersApp;
+			sourceTree = "<group>";
+		};
+		D2978E3F2A86B13D00A46304 /* LettersAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E402A86B13D00A46304 /* LettersAppTests.swift */,
+			);
+			path = LettersAppTests;
+			sourceTree = "<group>";
+		};
+		D2978E492A86B13D00A46304 /* LettersAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E4A2A86B13D00A46304 /* LettersAppUITests.swift */,
+				D2978E4C2A86B13D00A46304 /* LettersAppUITestsLaunchTests.swift */,
+			);
+			path = LettersAppUITests;
+			sourceTree = "<group>";
+		};
+		D2978E592A86E85200A46304 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E662A882E9900A46304 /* UserModel.swift */,
+				D2CE75272A8C07E900D67E4B /* LetterModel.swift */,
+				D2978E6A2A896BD600A46304 /* RealmLoginModel.swift */,
+				D2CE75252A8ABC9000D67E4B /* RealmUserIconModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2978E5A2A86E86000A46304 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E602A86EA0800A46304 /* Registration */,
+				D2CE75192A897F9F00D67E4B /* TabBarViewController.swift */,
+				D2978E682A8969C700A46304 /* LettersViewController.swift */,
+				D2CE751B2A8A1B0800D67E4B /* AccountViewController.swift */,
+				D2CE75182A897E2500D67E4B /* SubViewControllers */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D2978E5C2A86E86F00A46304 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE751D2A8A228600D67E4B /* LettersTableViewCell.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D2978E5D2A86E88900A46304 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D2978E322A86B13D00A46304 /* Assets.xcassets */,
+				D2978E2F2A86B13B00A46304 /* Main.storyboard */,
+				D2978E342A86B13D00A46304 /* LaunchScreen.storyboard */,
+				D2DEF6992A913DFF00EB94DB /* other.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D2978E602A86EA0800A46304 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				D2DEF6972A8EA4ED00EB94DB /* WelcomeViewController.swift */,
+				D2978E2D2A86B13B00A46304 /* SignInViewController.swift */,
+				D2978E5E2A86EA0500A46304 /* SignUpViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		D2978E612A86ECE900A46304 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE752E2A8CEECD00D67E4B /* LetterService.swift */,
+				D2978E622A86ED0000A46304 /* NavigationManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D2CE75182A897E2500D67E4B /* SubViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE75162A897E1700D67E4B /* NewLetterViewController.swift */,
+				D2CE751F2A8A446900D67E4B /* SaveLettersViewController.swift */,
+			);
+			path = SubViewControllers;
+			sourceTree = "<group>";
+		};
+		D2CE752B2A8CEC3400D67E4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D2CE752C2A8CEC5800D67E4B /* LetterModelExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2978E252A86B13B00A46304 /* LettersApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2978E502A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersApp" */;
+			buildPhases = (
+				D825DD19612F298CD03A0898 /* [CP] Check Pods Manifest.lock */,
+				D2978E222A86B13B00A46304 /* Sources */,
+				D2978E232A86B13B00A46304 /* Frameworks */,
+				D2978E242A86B13B00A46304 /* Resources */,
+				67D9D3AB7758F613CFC5A9D3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LettersApp;
+			productName = LettersApp;
+			productReference = D2978E262A86B13B00A46304 /* LettersApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2978E3B2A86B13D00A46304 /* LettersAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2978E532A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersAppTests" */;
+			buildPhases = (
+				D2978E382A86B13D00A46304 /* Sources */,
+				D2978E392A86B13D00A46304 /* Frameworks */,
+				D2978E3A2A86B13D00A46304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2978E3E2A86B13D00A46304 /* PBXTargetDependency */,
+			);
+			name = LettersAppTests;
+			productName = LettersAppTests;
+			productReference = D2978E3C2A86B13D00A46304 /* LettersAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D2978E452A86B13D00A46304 /* LettersAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2978E562A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersAppUITests" */;
+			buildPhases = (
+				D2978E422A86B13D00A46304 /* Sources */,
+				D2978E432A86B13D00A46304 /* Frameworks */,
+				D2978E442A86B13D00A46304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2978E482A86B13D00A46304 /* PBXTargetDependency */,
+			);
+			name = LettersAppUITests;
+			productName = LettersAppUITests;
+			productReference = D2978E462A86B13D00A46304 /* LettersAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2978E1E2A86B13B00A46304 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D2978E252A86B13B00A46304 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					D2978E3B2A86B13D00A46304 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D2978E252A86B13B00A46304;
+					};
+					D2978E452A86B13D00A46304 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = D2978E252A86B13B00A46304;
+					};
+				};
+			};
+			buildConfigurationList = D2978E212A86B13B00A46304 /* Build configuration list for PBXProject "LettersApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2978E1D2A86B13B00A46304;
+			productRefGroup = D2978E272A86B13B00A46304 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2978E252A86B13B00A46304 /* LettersApp */,
+				D2978E3B2A86B13D00A46304 /* LettersAppTests */,
+				D2978E452A86B13D00A46304 /* LettersAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2978E242A86B13B00A46304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2978E362A86B13D00A46304 /* LaunchScreen.storyboard in Resources */,
+				D2978E652A88261700A46304 /* GoogleService-Info.plist in Resources */,
+				D2978E332A86B13D00A46304 /* Assets.xcassets in Resources */,
+				D2978E312A86B13B00A46304 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E3A2A86B13D00A46304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E442A86B13D00A46304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67D9D3AB7758F613CFC5A9D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LettersApp/Pods-LettersApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LettersApp/Pods-LettersApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LettersApp/Pods-LettersApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D825DD19612F298CD03A0898 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LettersApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2978E222A86B13B00A46304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2978E2E2A86B13B00A46304 /* SignInViewController.swift in Sources */,
+				D2CE75262A8ABC9000D67E4B /* RealmUserIconModel.swift in Sources */,
+				D2978E2A2A86B13B00A46304 /* AppDelegate.swift in Sources */,
+				D2978E5F2A86EA0500A46304 /* SignUpViewController.swift in Sources */,
+				D2978E6B2A896BD600A46304 /* RealmLoginModel.swift in Sources */,
+				D2CE751E2A8A228600D67E4B /* LettersTableViewCell.swift in Sources */,
+				D2CE75282A8C07E900D67E4B /* LetterModel.swift in Sources */,
+				D2DEF69A2A913DFF00EB94DB /* other.swift in Sources */,
+				D2978E2C2A86B13B00A46304 /* SceneDelegate.swift in Sources */,
+				D2CE75202A8A446900D67E4B /* SaveLettersViewController.swift in Sources */,
+				D2978E672A882E9900A46304 /* UserModel.swift in Sources */,
+				D2978E632A86ED0000A46304 /* NavigationManager.swift in Sources */,
+				D2CE752D2A8CEC5800D67E4B /* LetterModelExtension.swift in Sources */,
+				D2978E692A8969C700A46304 /* LettersViewController.swift in Sources */,
+				D2CE751A2A897F9F00D67E4B /* TabBarViewController.swift in Sources */,
+				D2CE75172A897E1700D67E4B /* NewLetterViewController.swift in Sources */,
+				D2CE751C2A8A1B0800D67E4B /* AccountViewController.swift in Sources */,
+				D2CE752F2A8CEECD00D67E4B /* LetterService.swift in Sources */,
+				D2DEF6982A8EA4ED00EB94DB /* WelcomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E382A86B13D00A46304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2978E412A86B13D00A46304 /* LettersAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2978E422A86B13D00A46304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2978E4D2A86B13D00A46304 /* LettersAppUITestsLaunchTests.swift in Sources */,
+				D2978E4B2A86B13D00A46304 /* LettersAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D2978E3E2A86B13D00A46304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2978E252A86B13B00A46304 /* LettersApp */;
+			targetProxy = D2978E3D2A86B13D00A46304 /* PBXContainerItemProxy */;
+		};
+		D2978E482A86B13D00A46304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2978E252A86B13B00A46304 /* LettersApp */;
+			targetProxy = D2978E472A86B13D00A46304 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D2978E2F2A86B13B00A46304 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2978E302A86B13B00A46304 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2978E342A86B13D00A46304 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2978E352A86B13D00A46304 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2978E4E2A86B13D00A46304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2978E4F2A86B13D00A46304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2978E512A86B13D00A46304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA41688480B9EAF9BD42140 /* Pods-LettersApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LettersApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nexus;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2978E522A86B13D00A46304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7AA9BE535225A489D9FA478 /* Pods-LettersApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LettersApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Nexus;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D2978E542A86B13D00A46304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LettersApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LettersApp";
+			};
+			name = Debug;
+		};
+		D2978E552A86B13D00A46304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LettersApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LettersApp";
+			};
+			name = Release;
+		};
+		D2978E572A86B13D00A46304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LettersApp;
+			};
+			name = Debug;
+		};
+		D2978E582A86B13D00A46304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32MW45ALLS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "morrterry2021-gmail.com.LettersAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LettersApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2978E212A86B13B00A46304 /* Build configuration list for PBXProject "LettersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2978E4E2A86B13D00A46304 /* Debug */,
+				D2978E4F2A86B13D00A46304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2978E502A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2978E512A86B13D00A46304 /* Debug */,
+				D2978E522A86B13D00A46304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2978E532A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2978E542A86B13D00A46304 /* Debug */,
+				D2978E552A86B13D00A46304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2978E562A86B13D00A46304 /* Build configuration list for PBXNativeTarget "LettersAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2978E572A86B13D00A46304 /* Debug */,
+				D2978E582A86B13D00A46304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2978E1E2A86B13B00A46304 /* Project object */;
+}
