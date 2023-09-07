@@ -4,6 +4,6 @@ Posts app. In this application, you can create and share posts, as well as read 
 
 In development.
 
-https://github.com/AlexeyOrlovsky/PostsApp/assets/144032046/9f25e4b9-4113-42c1-b687-db99210369e6
+https://github.com/AlexeyOrlovsky/PostsApp/assets/144032046/5aed9279-2afd-4c10-8a66-8a29011b6ee6
 
 
