@@ -92,7 +92,13 @@ class LettersTableViewCell: UITableViewCell {
     func configure(with letter: LetterModel) {
         nameUser.text = letter.userName
         letterText.text = letter.text
-        publicationDate.text = letter.publicationDate
+        
+        /// examination date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        let timestamp = dateFormatter.date(from: letter.publicationDate ?? "No date")
+        publicationDate.text = timestamp?.formatted(date: .omitted, time: .shortened)
         
         // error
         if let imageUrlString = letter.iconUser, let imageUrl = URL(string: imageUrlString) {

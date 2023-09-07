@@ -128,6 +128,8 @@ class WelcomeViewController: UIViewController {
         
         authView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
+            make.left.equalToSuperview()
+            make.right.equalToSuperview()
             make.bottom.equalToSuperview()
             make.width.equalTo(400)
             make.height.equalTo(260)

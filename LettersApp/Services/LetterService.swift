@@ -12,7 +12,7 @@ class LetterService {
     let database = Firestore.firestore()
     
     func getDocuments(collectionID: String, completion: @escaping (Result<[LetterModel], Error>) -> Void) {
-        let collection = database.collection(collectionID)
+        let collection = database.collection(collectionID).order(by: "publicationDate", descending: true)
         
         collection.getDocuments { snapshot, error in
             if let error = error {

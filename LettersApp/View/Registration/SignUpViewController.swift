@@ -18,138 +18,176 @@ class SignUpViewController: UIViewController {
     
     /// UI Elements
     let sliderButton: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .label
-        button.layer.cornerRadius = 3
-        return button
+        let view = UIButton()
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 3
+        return view
     }()
     
-    let signUpTitleContainer: UIView = {
+    let signUpLabelContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(named: "SecondColor")
+        view.backgroundColor = UIColor(named: "regContainerColor")
         view.layer.cornerRadius = 20
         return view
     }()
     
-    let signUpTitle: UILabel = {
+    let signUpLabel: UILabel = {
         let label = UILabel()
         label.text = "Sign Up"
         label.font = .systemFont(ofSize: 20, weight: .bold)
+        label.textAlignment = .center
+        label.textColor = .white
         return label
     }()
     
-    let signUpRegFieldsContainer: UIView = {
+    let regContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(named: "SecondColor")
+        view.backgroundColor = UIColor(named: "regContainerColor")
         view.layer.cornerRadius = 20
         return view
     }()
     
-    var iconUser: UIImageView = {
+    let userIconImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .secondarySystemBackground
-        imageView.layer.cornerRadius = 40
         imageView.clipsToBounds = true
+        imageView.backgroundColor = .gray
+        imageView.layer.cornerRadius = 50
         return imageView
     }()
     
     let addIconButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.tintColor = .gray
         return button
     }()
     
-    let nameField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Name"
-        field.font = .systemFont(ofSize: 20, weight: .bold)
-        field.textColor = UIColor(named: "RegistrationTextColor")
-        return field
+    let textfieldName: UITextField = {
+        let textfield = UITextField()
+        textfield.attributedPlaceholder = NSAttributedString( string: "Name", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textfield.font = .systemFont(ofSize: 20, weight: .bold)
+        textfield.textColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return textfield
     }()
     
-    let emailField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Email"
-        field.font = .systemFont(ofSize: 20, weight: .bold)
-        field.textColor = UIColor(named: "RegistrationTextColor")
-        return field
+    let textfieldEmail: UITextField = {
+        let textfield = UITextField()
+        textfield.attributedPlaceholder = NSAttributedString( string: "Email", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textfield.font = .systemFont(ofSize: 20, weight: .bold)
+        textfield.textColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return textfield
     }()
     
-    let passwordField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Password"
-        field.font = .systemFont(ofSize: 20, weight: .bold)
-        field.textColor = UIColor(named: "RegistrationTextColor")
-        return field
+    let deleteButtonPassword: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        button.tintColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return button
     }()
     
-    let aboutMeField: UITextView = {
-        let field = UITextView()
-        field.text = "About me"
-        field.font = .systemFont(ofSize: 20, weight: .bold)
-        field.backgroundColor = UIColor(named: "SecondColor")
-        field.textColor = UIColor(named: "RegistrationTextColor")
-        field.showsVerticalScrollIndicator = false
-        return field
+    
+    let textfieldPassword: UITextField = {
+        let textfield = UITextField()
+        textfield.attributedPlaceholder = NSAttributedString( string: "Password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textfield.font = .systemFont(ofSize: 20, weight: .bold)
+        textfield.textColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return textfield
     }()
     
-    let linkField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Link"
-        field.font = .systemFont(ofSize: 20, weight: .bold)
-        field.textColor = UIColor(named: "RegistrationTextColor")
-        return field
+    let deleteButtonRepeatPass: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "xmark.circle.fill"), for: .normal)
+        button.tintColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return button
     }()
     
-    let createButtonContainer: UIView = {
+    let textfieldRepeatPassword: UITextField = {
+        let textfield = UITextField()
+        textfield.isSecureTextEntry = true
+        textfield.attributedPlaceholder = NSAttributedString( string: "Repeat password", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textfield.font = .systemFont(ofSize: 20, weight: .bold)
+        textfield.textColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return textfield
+    }()
+    
+    let textViewAboutMe: UITextView = {
+        let textView = UITextView()
+        textView.text = "Hello"
+        textView.attributedText = NSAttributedString( string: "About me...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textView.backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1)
+        textView.font = .systemFont(ofSize: 20, weight: .bold)
+        return textView
+    }()
+    
+    let textfieldTag: UITextField = {
+        let textfield = UITextField()
+        textfield.attributedPlaceholder = NSAttributedString( string: "#tag", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)])
+        textfield.font = .systemFont(ofSize: 20, weight: .bold)
+        textfield.textColor = UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1)
+        return textfield
+    }()
+    
+    let createLabelContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(named: "SecondColor")
+        view.backgroundColor = UIColor(named: "regContainerColor")
         view.layer.cornerRadius = 20
         return view
     }()
     
     let createButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Create", for: .normal)
-        button.setTitleColor(UIColor(named: "RegistrationTextColor"), for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
-        return button
+        let label = UIButton()
+        label.setTitle("Create", for: .normal)
+        label.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        label.setTitleColor(UIColor(red: 118/255, green: 117/255, blue: 117/255, alpha: 1), for: .normal)
+        return label
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupVeiwDidLoad()
+        view.backgroundColor = .black
+        
         setupAddSubviews()
+        delegatesAndDataSourses()
     }
     
-    func setupVeiwDidLoad() {
-        view.backgroundColor = UIColor(named: "RegistrationBackgroundColor")
-    }
-    
-    func setupAddSubviews() {
-        
+    private func setupAddSubviews() {
         view.addSubview(sliderButton)
-        sliderButton.addTarget(self, action: #selector(sliderButtonAction), for: .touchUpInside)
         
-        view.addSubview(signUpTitleContainer)
-        signUpTitleContainer.addSubview(signUpTitle)
+        view.addSubview(signUpLabelContainer)
+        signUpLabelContainer.addSubview(signUpLabel)
         
-        view.addSubview(signUpRegFieldsContainer)
-        signUpRegFieldsContainer.addSubview(iconUser)
-        signUpRegFieldsContainer.addSubview(addIconButton)
-        signUpRegFieldsContainer.addSubview(nameField)
-        signUpRegFieldsContainer.addSubview(emailField)
-        signUpRegFieldsContainer.addSubview(passwordField)
-        signUpRegFieldsContainer.addSubview(aboutMeField)
-        signUpRegFieldsContainer.addSubview(linkField)
+        view.addSubview(regContainer)
+        regContainer.addSubview(userIconImage)
+        regContainer.addSubview(addIconButton)
+        regContainer.addSubview(textfieldName)
+        regContainer.addSubview(textfieldEmail)
         
-        view.addSubview(createButtonContainer)
-        createButtonContainer.addSubview(createButton)
+        regContainer.addSubview(textfieldPassword)
+        regContainer.addSubview(deleteButtonPassword)
+        
+        regContainer.addSubview(textfieldRepeatPassword)
+        regContainer.addSubview(deleteButtonRepeatPass)
+        
+        regContainer.addSubview(textViewAboutMe)
+        regContainer.addSubview(textfieldTag)
+        
+        view.addSubview(createLabelContainer)
+        createLabelContainer.addSubview(createButton)
+        
+        deleteButtonPassword.addTarget(self, action: #selector(actionDeleteButtonPassword), for: .touchUpInside)
+        deleteButtonRepeatPass.addTarget(self, action: #selector(actionDeleteButtonRepeatPass), for: .touchUpInside)
+        sliderButton.addTarget(self, action: #selector(actionSliderButton), for: .touchUpInside)
         createButton.addTarget(self, action: #selector(createButtonAction), for: .touchUpInside)
-        
-        addIconButton.addTarget(self, action: #selector(addIconButtonAction), for: .touchUpInside)
+        addIconButton.addTarget(self, action: #selector(selectPhotoButtonTapped), for: .touchUpInside)
+    }
+    
+    private func delegatesAndDataSourses() {
+        textfieldName.delegate = self
+        textfieldEmail.delegate = self
+        textfieldPassword.delegate = self
+        textfieldRepeatPassword.delegate = self
+        textViewAboutMe.delegate = self
+        textfieldTag.delegate = self
     }
     
     /// Constraints
@@ -163,65 +201,81 @@ class SignUpViewController: UIViewController {
             make.height.equalTo(5)
         }
         
-        signUpTitleContainer.snp.makeConstraints { make in
+        signUpLabelContainer.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(signUpRegFieldsContainer.snp.top).offset(-10)
+            make.bottom.equalTo(regContainer.snp.top).inset(-10)
             make.width.equalTo(320)
             make.height.equalTo(60)
         }
         
-        signUpTitle.snp.makeConstraints { make in
+        signUpLabel.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
         
-        signUpRegFieldsContainer.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+        regContainer.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(160)
             make.width.equalTo(320)
-            make.height.equalTo(380)
+            make.height.equalTo(460)
         }
         
-        iconUser.snp.makeConstraints { make in
+        userIconImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(20)
-            make.width.equalTo(80)
-            make.height.equalTo(80)
+            make.width.equalTo(100)
+            make.height.equalTo(100)
         }
         
         addIconButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(iconUser.snp.bottom).offset(10)
+            make.top.equalTo(userIconImage.snp.bottom).offset(12)
         }
         
-        nameField.snp.makeConstraints { make in
-            make.bottom.equalTo(emailField.snp.top).inset(-10)
-            make.left.equalTo(15)
+        textfieldName.snp.makeConstraints { make in
+            make.top.equalTo(addIconButton.snp.bottom).offset(12)
+            make.left.equalToSuperview().inset(30)
         }
         
-        emailField.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.left.equalTo(15)
+        textfieldEmail.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(30)
+            make.top.equalTo(textfieldName.snp.bottom).offset(12)
         }
         
-        passwordField.snp.makeConstraints { make in
-            make.top.equalTo(emailField.snp.bottom).offset(10)
-            make.left.equalTo(15)
+        textfieldPassword.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(30)
+            make.top.equalTo(textfieldEmail.snp.bottom).offset(12)
         }
         
-        aboutMeField.snp.makeConstraints { make in
-            make.top.equalTo(passwordField.snp.bottom).offset(14)
-            make.left.equalTo(10)
-            make.width.equalTo(300)
+        deleteButtonPassword.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(20)
+            make.top.equalTo(textfieldEmail.snp.bottom).offset(12)
+        }
+        
+        textfieldRepeatPassword.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(30)
+            make.top.equalTo(textfieldPassword.snp.bottom).offset(12)
+        }
+        
+        deleteButtonRepeatPass.snp.makeConstraints { make in
+            make.right.equalToSuperview().inset(20)
+            make.top.equalTo(textfieldPassword.snp.bottom).offset(12)
+        }
+        
+        textViewAboutMe.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(26)
+            make.top.equalTo(textfieldRepeatPassword.snp.bottom).offset(12)
+            make.width.equalTo(280)
             make.height.equalTo(80)
         }
         
-        linkField.snp.makeConstraints { make in
-            make.top.equalTo(aboutMeField.snp.bottom).offset(6)
-            make.left.equalTo(15)
+        textfieldTag.snp.makeConstraints { make in
+            make.left.equalToSuperview().inset(30)
+            make.top.equalTo(textViewAboutMe.snp.bottom).offset(12)
         }
         
-        createButtonContainer.snp.makeConstraints { make in
+        createLabelContainer.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(signUpRegFieldsContainer.snp.bottom).inset(-10)
+            make.top.equalTo(regContainer.snp.bottom).inset(-10)
             make.width.equalTo(320)
             make.height.equalTo(60)
         }
@@ -236,10 +290,10 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController {
     
     @objc func createButtonAction() {
-        guard let icon = iconUser.image,
-              let name = nameField.text, !name.isEmpty, name.count >= 3,
-              let email = emailField.text, !email.isEmpty,
-              let password = passwordField.text, !password.isEmpty, password.count >= 6 else { fieldEmptyAlert(); return }
+        guard let icon = userIconImage.image,
+              let name = textfieldName.text, !name.isEmpty, name.count >= 3,
+              let email = textfieldEmail.text, !email.isEmpty,
+              let password = textfieldPassword.text, !password.isEmpty, password.count >= 6 else { fieldEmptyAlert(); return }
         
         createUserInFirebase(name: name, icon: icon, email: email, password: password)
         
@@ -258,7 +312,7 @@ extension SignUpViewController {
             }
             
             if let currentUser = authResult?.user.uid {
-                let user = UserModel(name: name, aboutMe: aboutMeField.text!, link: linkField.text!, userID: currentUser)
+                let user = UserModel(name: name, aboutMe: textViewAboutMe.text!, link: textfieldTag.text!, userID: currentUser)
                 addUserLocallyAndRemotaly(user: user, icon: icon)
             }
         }
@@ -315,6 +369,25 @@ extension SignUpViewController {
     @objc func sliderButtonAction() {
         dismiss(animated: true)
     }
+    
+    @objc func actionDeleteButtonPassword() {
+        textfieldPassword.text = ""
+    }
+    
+    @objc func actionDeleteButtonRepeatPass() {
+        textfieldRepeatPassword.text = ""
+    }
+    
+    @objc func selectPhotoButtonTapped() {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    @objc func actionSliderButton() {
+        dismiss(animated: true)
+    }
 }
 
 /// Alerts
@@ -345,7 +418,14 @@ extension SignUpViewController {
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
-        iconUser.image = image
+        userIconImage.image = image
         dismiss(animated: true)
+    }
+}
+
+/// UITextFieldDelegate
+extension SignUpViewController: UITextFieldDelegate, UITextViewDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

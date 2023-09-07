@@ -135,7 +135,7 @@ extension NewLetterViewController {
     func createPost(userID: String, userName: String) {
         getUserIcon { [self] iconData in
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
             let currentTime = dateFormatter.string(from: Date())
             
             if let iconData = iconData, let iconImage = UIImage(data: iconData) {
