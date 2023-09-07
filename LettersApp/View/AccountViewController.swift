@@ -18,6 +18,7 @@ class AccountViewController: UIViewController {
     let tableView = UITableView()
     let refreshControl = UIRefreshControl()
     
+    /// Data service / model
     var serviceLetters: LetterService?
     var letters = [LetterModel]() {
         didSet {
@@ -164,15 +165,15 @@ class AccountViewController: UIViewController {
             make.top.equalTo(userIcon.snp.bottom).offset(10)
         }
         
-        letterLabel.snp.makeConstraints { make in
-            make.top.equalTo(userName.snp.bottom).offset(20)
-            make.left.equalToSuperview().inset(10)
-        }
+//        letterLabel.snp.makeConstraints { make in
+//            make.top.equalTo(userName.snp.bottom).offset(20)
+//            make.left.equalToSuperview().inset(10)
+//        }
         
-        tableView.snp.makeConstraints { make in
-            make.top.equalTo(letterLabel.snp.bottom).offset(10)
-            make.leading.trailing.bottom.equalToSuperview()
-        }
+//        tableView.snp.makeConstraints { make in
+//            make.top.equalTo(letterLabel.snp.bottom).offset(10)
+//            make.leading.trailing.bottom.equalToSuperview()
+//        }
     }
 }
 

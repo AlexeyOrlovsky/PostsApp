@@ -22,7 +22,7 @@ class TabBarViewController: UITabBarController {
         ]
     }
     
-    // edit demonstration ViewControllers
+    /// edit demonstration ViewControllers
     private func showViewController(viewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         viewController.tabBarItem.title = title
         viewController.tabBarItem.image = image

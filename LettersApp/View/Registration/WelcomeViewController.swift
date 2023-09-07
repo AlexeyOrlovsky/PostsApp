@@ -117,6 +117,7 @@ class WelcomeViewController: UIViewController {
         }
     }
     
+    /// Constraints
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         

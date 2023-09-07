@@ -91,6 +91,7 @@ class SignInViewController: UIViewController {
         enterButton.addTarget(self, action: #selector(enterButtonAction), for: .touchUpInside)
     }
     
+    /// Constraints
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -136,7 +137,7 @@ class SignInViewController: UIViewController {
     }
 }
 
-/// @ubjc funcs
+/// @objc funcs
 extension SignInViewController {
     
     @objc func enterButtonAction() {

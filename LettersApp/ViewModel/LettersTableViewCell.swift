@@ -24,20 +24,21 @@ class LettersTableViewCell: UITableViewCell {
     
     let nameUser: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.font = .systemFont(ofSize: 14, weight: .semibold)
+        label.textColor = .systemGray
         return label
     }()
     
     let letterText: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 18, weight: .bold)
+        label.font = .systemFont(ofSize: 16, weight: .medium)
         label.numberOfLines = 0
         return label
     }()
     
     let publicationDate: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 14, weight: .black)
+        label.font = .systemFont(ofSize: 12, weight: .bold)
         label.textColor = .systemGray
         return label
     }()
@@ -52,48 +53,36 @@ class LettersTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        contentView.addSubview(iconUser)
+        // contentView.addSubview(iconUser)
         contentView.addSubview(nameUser)
         contentView.addSubview(letterText)
         contentView.addSubview(publicationDate)
-        contentView.addSubview(letterImage)
+        // contentView.addSubview(letterImage)
     }
     
     /// Constraints
     override func layoutSubviews() {
         super.layoutSubviews()
         
-//        iconUser.snp.makeConstraints { make in
-//            make.top.equalToSuperview().inset(10)
-//            make.left.equalToSuperview().inset(10)
-//            make.width.equalTo(40)
-//            make.height.equalTo(40)
-//        }
-//
-//        nameUser.snp.makeConstraints { make in
-//            make.centerY.equalTo(iconUser.snp.centerY)
-//            make.left.equalTo(iconUser.snp.right).offset(10)
-//        }
-//
-//        publicationDate.snp.makeConstraints { make in
-//            make.top.equalTo(nameUser.snp.bottom).offset(2)
-//            make.left.equalTo(iconUser.snp.right).offset(10)
-//            make.width.equalTo(280)
-//        }
-        
-        letterText.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(10)
+        nameUser.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(14)
             make.left.equalToSuperview().inset(10)
             make.right.equalToSuperview().inset(10)
-            make.bottom.equalToSuperview().inset(10)
+            make.bottom.lessThanOrEqualTo(letterText.snp.top)
+        }
+
+        publicationDate.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(4)
+            make.right.equalToSuperview().inset(10)
+            make.top.lessThanOrEqualTo(letterText.snp.bottom)
         }
         
-//        letterImage.snp.makeConstraints { make in
-//            make.top.equalTo(letterText.snp.bottom).offset(10)
-//            make.left.equalTo(iconUser.snp.right).offset(10)
-//            make.width.equalTo(320)
-//            make.height.equalTo(400)
-//        }
+        letterText.snp.makeConstraints { make in
+            make.top.equalTo(nameUser.snp.bottom).offset(5)
+            make.left.equalToSuperview().inset(10)
+            make.right.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview().inset(40)
+        }
     }
     
     required init?(coder: NSCoder) {

@@ -152,6 +152,7 @@ class SignUpViewController: UIViewController {
         addIconButton.addTarget(self, action: #selector(addIconButtonAction), for: .touchUpInside)
     }
     
+    /// Constraints
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -246,7 +247,7 @@ extension SignUpViewController {
         print("create button tapped")
     }
     
-    // MARK: Firebase Authentication
+    /// Firebase Authentication
     func createUserInFirebase(name: String, icon: UIImage, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { [self] authResult, error in
             if let error = error {
@@ -263,7 +264,7 @@ extension SignUpViewController {
         }
     }
     
-    // MARK: Data Storage
+    /// Data Storage
     func addUserLocallyAndRemotaly(user: UserModel, icon: UIImage) {
         saveUserInUserDefaults(user: user)
         saveUserInRealm(user: user, icon: icon)

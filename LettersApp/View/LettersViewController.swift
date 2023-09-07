@@ -99,6 +99,10 @@ extension LettersViewController: UITableViewDelegate, UITableViewDataSource {
             deletePost(post)
         }
     }
+}
+
+/// other funcs
+extension LettersViewController {
     
     func deletePost(_ letter: LetterModel) {
         if let userData = UserDefaults.standard.data(forKey: "user"),
