@@ -119,9 +119,12 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(named: "RegistrationBackgroundColor")
 
         setupAddSubviews()
+    }
+    
+    func setupViewDidLoad() {
+        view.backgroundColor = UIColor(named: "RegistrationBackgroundColor")
     }
     
     func setupAddSubviews() {
