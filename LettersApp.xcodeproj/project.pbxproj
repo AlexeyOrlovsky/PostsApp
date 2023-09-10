@@ -23,6 +23,7 @@
 		D2978E672A882E9900A46304 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E662A882E9900A46304 /* UserModel.swift */; };
 		D2978E692A8969C700A46304 /* LettersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E682A8969C700A46304 /* LettersViewController.swift */; };
 		D2978E6B2A896BD600A46304 /* RealmLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2978E6A2A896BD600A46304 /* RealmLoginModel.swift */; };
+		D29A46EB2AACF5F900B2FB48 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29A46EA2AACF5F900B2FB48 /* Extensions.swift */; };
 		D2CE75172A897E1700D67E4B /* NewLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75162A897E1700D67E4B /* NewLetterViewController.swift */; };
 		D2CE751A2A897F9F00D67E4B /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE75192A897F9F00D67E4B /* TabBarViewController.swift */; };
 		D2CE751C2A8A1B0800D67E4B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CE751B2A8A1B0800D67E4B /* AccountViewController.swift */; };
@@ -76,6 +77,7 @@
 		D2978E662A882E9900A46304 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		D2978E682A8969C700A46304 /* LettersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersViewController.swift; sourceTree = "<group>"; };
 		D2978E6A2A896BD600A46304 /* RealmLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLoginModel.swift; sourceTree = "<group>"; };
+		D29A46EA2AACF5F900B2FB48 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D2CE75162A897E1700D67E4B /* NewLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLetterViewController.swift; sourceTree = "<group>"; };
 		D2CE75192A897F9F00D67E4B /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D2CE751B2A8A1B0800D67E4B /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				D2978E292A86B13B00A46304 /* AppDelegate.swift */,
 				D2978E2B2A86B13B00A46304 /* SceneDelegate.swift */,
+				D29A46EA2AACF5F900B2FB48 /* Extensions.swift */,
 				D2978E642A88261700A46304 /* GoogleService-Info.plist */,
 				D2978E372A86B13D00A46304 /* Info.plist */,
 				D2978E592A86E85200A46304 /* Model */,
@@ -457,6 +460,7 @@
 				D2CE752D2A8CEC5800D67E4B /* LetterModelExtension.swift in Sources */,
 				D2978E692A8969C700A46304 /* LettersViewController.swift in Sources */,
 				D2CE751A2A897F9F00D67E4B /* TabBarViewController.swift in Sources */,
+				D29A46EB2AACF5F900B2FB48 /* Extensions.swift in Sources */,
 				D2CE75172A897E1700D67E4B /* NewLetterViewController.swift in Sources */,
 				D2CE751C2A8A1B0800D67E4B /* AccountViewController.swift in Sources */,
 				D2CE752F2A8CEECD00D67E4B /* LetterService.swift in Sources */,
