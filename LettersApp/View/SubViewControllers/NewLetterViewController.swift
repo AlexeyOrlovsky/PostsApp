@@ -53,6 +53,8 @@ class NewLetterViewController: UIViewController {
         navigationItem.leftBarButtonItem?.tintColor = .label
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Publish", style: .done, target: self, action: #selector(rightBarButtonAction))
         navigationItem.rightBarButtonItem?.tintColor = .systemBlue
+        
+        self.writeLetter.becomeFirstResponder()
     }
     
     func setupAddSubviews() {
