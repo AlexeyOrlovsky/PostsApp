@@ -57,6 +57,12 @@ class NewLetterViewController: UIViewController {
         self.writeLetter.becomeFirstResponder()
     }
     
+    func setupShowKeyboard() {
+        writeLetter.delegate = self
+        
+        self.writeLetter.becomeFirstResponder()
+    }
+    
     func setupAddSubviews() {
         view.addSubview(writeLetter)
         view.addSubview(addImageButton)
@@ -196,4 +202,9 @@ extension NewLetterViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default))
         present(alert, animated: true)
     }
+}
+
+// MARK: UITextViewDelegate
+extension NewLetterViewController: UITextViewDelegate {
+    
 }
